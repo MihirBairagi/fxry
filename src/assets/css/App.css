@@ -461,6 +461,74 @@ p.unsure-btn {
      html {
         font-size: 3.2vw;
     }
+
+    br{
+      display: none;
+    }
+    .pincode-section::after{
+      left: -60%;
+      top: 0%;
+      width: 112%;
+      height: 120%;
+  
+    }
+    .padding-x-all {
+      padding: 0 1.5rem;
+    }
+    .pincode-box.sec-com-padding {
+      padding: 5rem 0;
+    }
+    .pincode-box::before{
+      bottom: -21%;
+    }
+    .show-box{
+      width: 91%;
+      margin-top: 2rem;
+    }
+    .items-box {
+      flex-wrap: wrap; 
+      flex-direction: column-reverse;
+    }
+    .item-select-box {
+      width: 100%;
+    }
+    .item-describe-box textarea{
+      width: 93%;
+    }
+    .sec-com-padding{
+      padding: 5rem 0;
+    }
+    .select-plan-inner-box {
+      width: 100%;
+    }
+    .select-plan-box {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    .select-plan-inner-box button .icon-box img{
+      width: 4rem;
+    }
+    .same-bg-section::after{
+      left: -88%;
+      top: 4%;
+      width: 120%;
+      height: 102%;
+    }
+    .alteration-select-box {
+      margin-bottom: 2.5rem;
+    }
+    .same-bg-section::before{
+      width: 15%;
+    }
+    .pincode-box::after{
+      right: 6%;
+      top: 13%;
+      width: 15%;
+      height: 25%;
+    }
+
+
+
    }  
     
     
