@@ -5,6 +5,8 @@ import PincodeScreen from './components/PincodeScreen';
 import TypeSelectionScreen from './components/TypeSelectionScreen';
 import PlanScreen from './components/PlanScreen';
 import Alteration from './components/Alteration';
+import PerfectFit from './components/PerfectFit';
+import KnowMore from './components/KnowMore';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/types" element={<TypeSelectionScreen />} />
         <Route path="/plan" element={<PlanScreen />} />
         <Route path="/alteration" element={<Alteration />} />
+        <Route path="/perfect-fit" element={<PerfectFit/>} />
+        <Route path="/know-more" element={<KnowMore/>} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

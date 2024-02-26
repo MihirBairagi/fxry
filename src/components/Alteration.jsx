@@ -10,11 +10,44 @@ function Alteration() {
     const location = useLocation();
     const selectedType = location.state?.selectedType || '';
   
-    const [selectedPlan, setSelectedPlan] = useState(() => {
+    const [selectedPlan] = useState(() => {
       const savedPlan = localStorage.getItem('selectedPlan');
       return savedPlan || '';
     });
+
+    const [selectedTask, setSelectedTask] = useState(() => {
+      const savedTask = localStorage.getItem('selectedTask');
+      return savedTask || '';
+    });
     
+    const [selectedOption, setSelectedOption] = useState(() => {
+      const savedOption = localStorage.getItem('selectedOption');
+      return savedOption || '';
+    });
+    
+  
+    const handleTaskSelection = (task) => {
+      setSelectedTask(task);
+    };
+  
+    const handleOptionSelection = (option) => {
+      setSelectedOption(option);
+    };
+  
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+      localStorage.setItem('selectedTask', selectedTask);
+    }, [selectedTask]);
+  
+    useEffect(() => {
+      localStorage.setItem('selectedOption', selectedOption);
+    }, [selectedOption]);
+
+
+    const handleApply = () => {
+      navigate('/perfect-fit', { state: { selectedPlan, selectedType, selectedOption } });
+    };
 
 
   return (
@@ -35,47 +68,48 @@ function Alteration() {
 
             <div className="show-box-last-list">
               <p className='show-box-para' >Task Detail</p>
-              <h4 className='show-box-answer'>{selectedType} altration</h4>
-              <p className='show-box-para' >Hem & Inseam, Rise & Break, Cuff, Waist, Bottom, Taper, Take in</p>
+              <h4 className='show-box-answer'>{selectedType ? selectedType : ''} {selectedTask ? selectedTask : '-'}</h4>
+              <p className='show-box-para' >{selectedOption ? selectedOption : '-'}</p>
             </div>
           </div>
 
           <div className="item-select-box">
-            <h2>Would you like your skirt altered<br/> or repaired?</h2>
+            <h2>Would you like your {selectedType ? selectedType : 'item'} altered or repaired?</h2>
             <p className='para' >Select one service, if you require another you can add this at a later stage.</p>
 
             <div className="alteration-select-box wears-box flex-box justify-between">
                 <div className="icon-main-box">
-                    <div className="icon-box">
-                        <img src={alterationIconOne} alt="" />
-                        <h6>Altered</h6>
-                    </div>
-                    <div className="icon-box">
-                        <img src={alterationIconTwo} alt="" />
-                        <h6>Repair</h6>
-                    </div>
+                        <h4 className='desktop-none' >How would you like your item<br/> to be {selectedTask ? selectedTask : ''}?</h4>
+                        <button onClick={() => handleTaskSelection('Alteration')}  className={selectedTask === 'Alteration' ? 'icon-box item-selected' : 'icon-box'} >
+                          <img src={alterationIconOne} alt="" />
+                          <h6>Altered</h6>
+                        </button>
+                        <button onClick={() => handleTaskSelection('Repair')}  className={selectedTask === 'Repair' ? 'icon-box item-selected' : 'icon-box'} >
+                          <img src={alterationIconTwo} alt="" />
+                          <h6>Repair</h6>
+                        </button>
                 </div>
                 <div className="text-box">
-                    <h4>How would you like your item<br/> to be altered?</h4>
+                    <h4 className='mobile-none' >How would you like your item<br/> to be {selectedTask ? selectedTask : ''}?</h4>
                     <p className="para">Select one option...</p>
                     <ul className='items-wears-listing' >
                         <li>
-                            <button>
+                            <button  onClick={() => handleOptionSelection('Waist in')} className={selectedOption === 'Waist in' ? 'item-selected' : ''}  >
                                 Waist in
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button  onClick={() => handleOptionSelection('Take in from sides')} className={selectedOption === 'Take in from sides' ? 'item-selected' : ''} >
                                 Take in from sides
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button  onClick={() => handleOptionSelection('Shorten')} className={selectedOption === 'Shorten' ? 'item-selected' : ''} >
                                 Shorten
                             </button>
                         </li>
                         <li>
-                            <button>
+                            <button  onClick={() => handleOptionSelection('Upsize')} className={selectedOption === 'Upsize' ? 'item-selected' : ''} >
                                 Upsize
                             </button>
                         </li>
@@ -84,7 +118,7 @@ function Alteration() {
                 </div>
             </div>
 
-            <button className='section-main-btn'>Fit it to you<span><img src={btnArrow} alt="" /></span></button>
+            <button className='section-main-btn'  onClick={handleApply}> Fit it to you<span><img src={btnArrow} alt="" /></span></button>
 
           </div>
         </div>

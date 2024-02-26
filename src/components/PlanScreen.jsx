@@ -15,6 +15,16 @@ function PlanScreen() {
     return savedPlan || '';
   });
 
+  const [selectedTask, setSelectedTask] = useState(() => {
+    const savedTask = localStorage.getItem('selectedTask');
+    return savedTask || '';
+  });
+
+  const [selectedOption, setSelectedOption] = useState(() => {
+    const savedOption = localStorage.getItem('selectedOption');
+    return savedOption || '';
+  });
+
   const handlePlanSelection = (plan) => {
     setSelectedPlan(plan);
   };
@@ -47,8 +57,8 @@ function PlanScreen() {
 
             <div className="show-box-last-list">
               <p className='show-box-para' >Task Detail</p>
-              <h4 className='show-box-answer'>{selectedType} altration</h4>
-              <p className='show-box-para' >Hem & Inseam, Rise & Break, Cuff, Waist, Bottom, Taper, Take in</p>
+              <h4 className='show-box-answer'>{selectedType ? selectedType : ''} {selectedTask ? selectedTask : '-'}</h4>
+              <p className='show-box-para' >{selectedOption ? selectedOption : '-'}</p>
             </div>
           </div>
 
