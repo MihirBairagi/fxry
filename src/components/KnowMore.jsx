@@ -29,6 +29,17 @@ const KnowMore = ()=>{
       const savedOption = localStorage.getItem('selectedOption');
       return savedOption || '';
     });
+
+    const [notes, setNotes] = useState(() => {
+        const notes = localStorage.getItem('notes');
+        return notes || '';
+      });
+
+      const navigate = useNavigate();
+
+      useEffect(() => {
+        localStorage.setItem('notes', notes);
+      }, [notes]);
     
 
     return(
@@ -59,7 +70,12 @@ const KnowMore = ()=>{
               <p className='para mb-1' >Give us the measurements, pin the item, or send in a matching item before? Watch our <br/> super quick and helpful tutorial videos.</p>
   
   
-              <div class="item-describe-box"><h5 class="describe-heading">Notes to our tailors</h5><textarea class="know-more-description" placeholder="eg.Be careful of the zip."></textarea></div>
+              <div class="item-describe-box"><h5 class="describe-heading">Notes to our tailors</h5>
+                <textarea class="know-more-description" placeholder="eg.Be careful of the zip."
+                  value={notes}
+                  onChange={(e) => setNotes(e.target.value)}
+                ></textarea>
+              </div>
 
               <a class="popup-text">Unsure? Book a free virtual fixer consultation?</a>
 
