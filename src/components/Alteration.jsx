@@ -7,6 +7,14 @@ import alterationIconOne from'../assets/img/alteration-icon-1.webp'
 
 
 function Alteration() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleBox = () => {
+    setIsOpen(!isOpen);
+  };
+
+
     const location = useLocation();
     const selectedType = location.state?.selectedType || '';
   
@@ -53,9 +61,9 @@ function Alteration() {
   return (
     <section className='items-section same-bg-section relative' >
       <div className="container padding-x-all">
-        <div className="items-box sec-com-padding flex-box justify-between align-center">
+        <div className="alteration-box items-box sec-com-padding flex-box justify-between align-center">
     
-          <div className="show-box">
+          <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
             <div className="show-box-list">
               <p className='show-box-para' >Your items</p>
               <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>

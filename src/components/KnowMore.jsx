@@ -5,6 +5,13 @@ import btnArrow from '../assets/img/section-btn-arrow.webp'
 
 const KnowMore = ()=>{
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleBox = () => {
+      setIsOpen(!isOpen);
+    };
+  
+
     const location = useLocation();
     const selectedType = location.state?.selectedType || '';
   
@@ -29,7 +36,7 @@ const KnowMore = ()=>{
         <div className="container padding-x-all">
           <div className="know-more-box sec-com-padding flex-box justify-between align-center">
       
-            <div className="show-box">
+            <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
               <div className="show-box-list">
                 <p className='show-box-para' >Your items</p>
                 <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>

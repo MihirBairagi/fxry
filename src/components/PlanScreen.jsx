@@ -7,6 +7,14 @@ import standardIcon from '../assets/img/std-icon.webp'
 import premiumIcon from '../assets/img/pre-icon.webp'
 
 function PlanScreen() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleBox = () => {
+    setIsOpen(!isOpen);
+  };
+
+
   const location = useLocation();
   const selectedType = location.state?.selectedType || '';
 
@@ -44,7 +52,7 @@ function PlanScreen() {
       <div className="container  padding-x-all">
         <div className="select-plan-box sec-com-padding flex-box justify-between align-center">
 
-          <div className="show-box">
+          <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
             <div className="show-box-list">
               <p className='show-box-para' >Your items</p>
               <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>

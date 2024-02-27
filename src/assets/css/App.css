@@ -68,7 +68,7 @@ h1 {
   margin-top: 2.8rem;
 }
 .know-more-box {
-  padding: 7rem 0;
+  padding: 7.3rem 0;
 }
 
 /* pincode  */
@@ -79,7 +79,7 @@ h1 {
   background: url(../img/pincode-section-bg.webp);
   background-repeat: no-repeat;
   background-size: contain;
-  left: -4%;
+  left: -1%;
   top: 0%;
   width: 50%;
   height: 100%;
@@ -124,17 +124,17 @@ h1 {
 }
 
 .pincode-box.sec-com-padding {
-  padding: 12rem 0;
+  padding: 9rem 0;
 }
 ul.pincode-usp-listing li img {
   object-fit: contain;
-  width: 1.6rem;
-  height: 1.6rem;
-  margin-right: 0.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.1rem;
 }
 ul.pincode-usp-listing li {
   align-items: center;
-  padding: 0 0.7rem;
+  padding: 0 0.6rem;
   border-right: 1px solid #1B1C1C;
 }
 ul.pincode-usp-listing li:first-child{
@@ -144,10 +144,10 @@ ul.pincode-usp-listing p {
   font-family: 'halyard-light';
   line-height: 0.9rem;
   letter-spacing: -0.06rem;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
 }
 ul.pincode-usp-listing{
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 form.pincode-form {
   margin-bottom: 0.8rem;
@@ -202,6 +202,33 @@ p.form-down-text {
   border-radius: 0.7rem;
   width: 20%;
   height: max-content;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.show-box::after{
+  content: '';
+  position: absolute;
+  background: url(../img/minus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 6%;
+  top: 4%;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.show-box.open::after{
+  background: url(../img/plus.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 35%;
+}
+.show-box.open {
+  height: 2.4rem;
+  overflow: hidden;
+  padding: 1rem 1.2rem;
+  transition: all 0.3s;
 }
 p.show-box-para {
   font-family: 'instrument-regular';
@@ -229,9 +256,9 @@ h4.show-box-answer {
   background: url(../img/other-section-bg.webp);
   background-repeat: no-repeat;
   background-size: contain;
-  left: -5%;
+  left: -1%;
   top: 0%;
-  width: 45%;
+  width: 39%;
   height: 100%;
   z-index: -1;
 }
@@ -245,10 +272,12 @@ h4.show-box-answer {
   right: 0;
   top: 0%;
   width: 11%;
-  height: 15%;
+  height: 18%;
   z-index: -1;
 }
-
+.item-pad-box {
+  padding: 4.3rem 0;
+}
 .item-select-box {
   width: 57%;
 }
@@ -269,7 +298,7 @@ p.para {
   background: #fff;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  margin: 1.2rem 0;
+  margin: 1rem 0;
 }
 .wears-box h5 {
   text-transform: uppercase;
@@ -343,12 +372,15 @@ button.section-main-btn {
 
 /* plan section  */
 
+.select-plan-box{
+  padding: 4.5rem 0;
+}
 .select-plan-inner-box button {
-  width: 100%;
-  margin: 1rem 0;
+  width: 92%;
+  margin: 0.8rem 0;
   background: #fff;
   border: none;
-  padding: 1rem;
+  padding: 0.8rem 1rem;
   padding-bottom: 1.2rem;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -364,7 +396,7 @@ button.section-main-btn {
   width: 13%;
 }
 .select-plan-inner-box button .icon-box img {
-  width: 4.8rem;
+  width: 4.2rem;
   margin: auto;
   object-fit: contain;
 }
@@ -386,14 +418,14 @@ button.section-main-btn {
 .select-plan-inner-box button .text-box h3 {
   font-family: 'halyard-medium';
   letter-spacing: -0.05rem;
-  font-size: 1.3rem;
-  padding-bottom: 0.8rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.6rem;
   border-bottom: 1px solid #D9D9D9;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-weight: 100;
 }
 .select-plan-inner-box button .text-box h4 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: 'instrument-regular';
   line-height: 1.2rem;
   margin-bottom: 0.5rem;
@@ -429,7 +461,11 @@ p.unsure-btn {
 }
 .alteration-select-box {
   margin-bottom: 4.5rem;
-  padding: 2.5rem 1.5rem;
+  padding: 2rem 1.5rem;
+}
+
+.alteration-box {
+  padding: 4.6rem 0;
 }
 
 .icon-main-box {
@@ -631,13 +667,7 @@ textarea.know-more-description {
     br{
       display: none;
     }
-    .pincode-section::after{
-      left: -60%;
-      top: 0%;
-      width: 112%;
-      height: 120%;
-  
-    }
+
     .padding-x-all {
       padding: 0 1.5rem;
     }
@@ -668,19 +698,54 @@ textarea.know-more-description {
     .select-plan-inner-box {
       width: 100%;
     }
-    .select-plan-inner-box button .icon-box img{
-      width: 4rem;
-    }
     .same-bg-section::after{
       left: 0%;
       top: 0%;
       width: 100%;
-      height: 28%;
+      height: 34%;
       background: url(../img/mobile-bg.webp);
       background-repeat: no-repeat;
       background-size: contain;
-
     }
+    .pincode-section::after{
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      height: 34%;
+      background: url(../img/mobile-bg.webp);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .pincode-box h1::after, .pincode-box::after{
+      display: none;
+    }
+    .pincode-box h1 {
+      margin-top: 7rem;
+      font-size: 2.6rem;
+  }
+  ul.pincode-usp-listing p {
+    font-family: 'halyard-light';
+    line-height: 0.9rem;
+    letter-spacing: -0.06rem;
+    font-size: 1.25rem;
+}
+ul.pincode-usp-listing li img {
+  object-fit: contain;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.8rem;
+}
+ul.pincode-usp-listing li {
+  border: none !important;
+  margin: 0;
+}
+p.form-down-text{
+  font-size: 0.9rem;
+}
+form.pincode-form input{
+  font-size: 0.9rem;
+  width: 54%;
+}
     .alteration-select-box {
       margin-bottom: 2.5rem;
       padding: 2rem 1.2rem;
@@ -717,7 +782,7 @@ h2{
   line-height: 2rem;
 }
 .item-select-box h2+p {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 
 .perfect-fit-box .tabs-box {
@@ -851,20 +916,24 @@ img.pop-up-close-icon {
   margin-right: 0;
   width: 100%;
   border: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .icon-main-box .icon-box{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 0;
-  margin-left: 0;
+  width: 48%;
+  margin: 0;
+  padding: 0.6rem 1.2rem;
 }
 .icon-main-box .icon-box img {
   width: 1.7rem;
   margin-right: 0.7rem;
 }
 .icon-main-box .icon-box h6 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .alteration-select-box .text-box {
   width: 100%;
@@ -872,7 +941,7 @@ img.pop-up-close-icon {
 }
 ul.items-wears-listing li button {
   padding: 0.35rem 1.2rem;
-  font-size: 1.15rem;
+  font-size: 1.09rem;
 }
 .icon-main-box h4 {
   font-family: 'halyard-light';
@@ -893,6 +962,67 @@ h5.describe-heading{
 }
 .content-box-three .example-note-box {
   width: 100%;
+}
+.select-plan-inner-box button{
+  width: 100%;
+}
+
+.select-plan-inner-box button .text-box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.select-plan-inner-box button .text-box h4 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+.select-plan-inner-box button .text-box h4+p {
+  text-align: center;
+}
+.select-plan-inner-box button .check-box {
+  width: 100%;
+  margin-top: 1rem;
+}
+.select-plan-inner-box button .text-box {
+  width: 100%;
+}
+.select-plan-inner-box button .icon-box {
+  width: 100%;
+}
+.select-plan-inner-box button .icon-box img {
+  width: 4.7rem;
+  margin-bottom: 0.5rem;
+}
+.select-plan-inner-box button .check-box img{
+  width: 1rem;
+    height: 1.1rem;
+}
+p.unsure-btn {
+  font-size: 0.85rem;
+}
+
+h4.show-box-answer {
+  margin-top: 0rem;
+}
+.show-box.open {
+  height: 2.6rem;
+  overflow: hidden;
+  padding: 0.6rem 2rem;
+  width: 25rem;
+  margin: auto;
+  margin-bottom: 7.5rem;
+}
+
+.show-box::after {
+  right: 5%;
+  top: 6%;
+  width: 2.2rem;
+  height: 2.1rem;
+}
+.show-box.open::after{
+  top: 21%
 }
 
    }  

@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import btnArrow from '../assets/img/section-btn-arrow.webp'
 function TypeSelectionScreen() {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleBox = () => {
+    setIsOpen(!isOpen);
+  };
+
   const [selectedType, setSelectedType] = useState(() => {
     const savedType = localStorage.getItem('selectedType');
     return savedType || '';
@@ -40,9 +47,9 @@ function TypeSelectionScreen() {
   return (
     <section className='items-section same-bg-section relative' >
       <div className="container padding-x-all">
-        <div className="items-box sec-com-padding flex-box justify-between align-center">
+        <div className="items-box item-pad-box sec-com-padding flex-box justify-between align-center">
     
-          <div className="show-box">
+          <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
             <div className="show-box-list">
               <p className='show-box-para' >Your items</p>
               <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>
@@ -109,10 +116,10 @@ function TypeSelectionScreen() {
                 </li>
                 <li>
                   <button
-                    onClick={() => handleTypeSelection('Ponchos')}
-                    className={selectedType === 'Ponchos' ? 'item-selected' : ''}
+                    onClick={() => handleTypeSelection('Windbreaker')}
+                    className={selectedType === 'Windbreaker' ? 'item-selected' : ''}
                   >
-                    {selectedType === 'Ponchos' ? 'Ponchos' : 'Ponchos'}
+                    {selectedType === 'Windbreaker' ? 'Windbreaker' : 'Windbreaker'}
                   </button>
                 </li>
                 <li>

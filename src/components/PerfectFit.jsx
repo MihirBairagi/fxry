@@ -12,6 +12,14 @@ import tickMark from '../assets/img/check-mark.webp'
 import VideoPopup from './VideoPopup';
 
 const PerfectFit = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleBox = () => {
+    setIsOpen(!isOpen);
+  };
+
+
     const [selectedTab, setSelectedTab] = useState(() => {
         const storedTab = localStorage.getItem('selectedTab');
         return storedTab ? parseInt(storedTab) : 1;
@@ -87,7 +95,7 @@ const PerfectFit = () => {
         <div className="container padding-x-all">
           <div className="items-box sec-com-padding flex-box justify-between align-center">
       
-            <div className="show-box">
+            <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
               <div className="show-box-list">
                 <p className='show-box-para' >Your items</p>
                 <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>
