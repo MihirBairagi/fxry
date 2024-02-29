@@ -1531,7 +1531,9 @@ button.promo-code-btn {
 }
 .promo-code-box {
   padding: 1.8rem 0;
-  margin-top: -3.5rem;
+}
+section.checkout-section .item-detail-box {
+  padding: 2rem 0;
 }
 .promo-code-box .checkout-sub-total h6 {
   font-size: 0.9rem;
