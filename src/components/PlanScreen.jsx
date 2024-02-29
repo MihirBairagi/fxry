@@ -23,12 +23,12 @@ function PlanScreen() {
     return savedPlan || '';
   });
 
-  const [selectedTask, setSelectedTask] = useState(() => {
+  const [selectedTask] = useState(() => {
     const savedTask = localStorage.getItem('selectedTask');
     return savedTask || '';
   });
 
-  const [selectedOption, setSelectedOption] = useState(() => {
+  const [selectedOption] = useState(() => {
     const savedOption = localStorage.getItem('selectedOption');
     return savedOption || '';
   });

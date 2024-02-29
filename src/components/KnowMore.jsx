@@ -42,6 +42,11 @@ const KnowMore = ()=>{
       }, [notes]);
     
 
+      const handleApply = () => {
+        navigate('/item-detail', { state: { selectedPlan, selectedType, selectedOption } });
+      };
+
+
     return(
         <section className=' items-section same-bg-section relative' >
         <div className="container padding-x-all">
@@ -79,7 +84,7 @@ const KnowMore = ()=>{
 
               <a class="popup-text">Unsure? Book a free virtual fixer consultation?</a>
 
-              <button className='section-main-btn mt-2-8' >Next<span><img src={btnArrow} alt="" /></span></button>
+              <button className='section-main-btn mt-2-8' onClick={handleApply}  >Next<span><img src={btnArrow} alt="" /></span></button>
   
             </div>
           </div>

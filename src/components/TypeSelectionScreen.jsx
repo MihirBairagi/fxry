@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import btnArrow from '../assets/img/section-btn-arrow.webp'
 function TypeSelectionScreen() {
-  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleBox = () => {
@@ -17,15 +17,15 @@ function TypeSelectionScreen() {
     const savedDescribe = localStorage.getItem('describe');
     return savedDescribe || '';
   });
-  const [selectedPlan, setSelectedPlan] = useState(() => {
+  const [selectedPlan] = useState(() => {
     const savedPlan = localStorage.getItem('selectedPlan');
     return savedPlan || '';
   });
-  const [selectedTask, setSelectedTask] = useState(() => {
+  const [selectedTask] = useState(() => {
     const savedTask = localStorage.getItem('selectedTask');
     return savedTask || '';
   });
-  const [selectedOption, setSelectedOption] = useState(() => {
+  const [selectedOption] = useState(() => {
     const savedOption = localStorage.getItem('selectedOption');
     return savedOption || '';
   });
