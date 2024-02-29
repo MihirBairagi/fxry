@@ -1139,8 +1139,8 @@ abbr {
 }
 ul.pincode-usp-listing li img {
   object-fit: contain;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.1rem;
+  height: 2.1rem;
   margin-right: 0.8rem;
 }
 ul.pincode-usp-listing li {
@@ -1581,9 +1581,6 @@ p.smallest-para {
   font-size: 0.8rem;
   margin-bottom: 0.4rem;
 }
-.react-calendar__tile{
-  font-size: 1.1rem;
-}
 .react-calendar__month-view__weekdays__weekday abbr {
   font-size: 0.8rem;
 }
@@ -1591,7 +1588,8 @@ p.smallest-para {
   font-size: 1.5rem;
 }
 .react-calendar__tile {
-  padding: 1.1rem 0rem;
+  padding: 1rem 0rem;
+  font-size: 1.1rem;
 }
 .form-question{
   font-size: 0.95rem;
