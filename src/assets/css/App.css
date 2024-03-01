@@ -1044,6 +1044,87 @@ abbr {
   width: 97%;
 }
 
+/* thankyou screen  */
+
+section.thankyou-section {
+  background: url(../img/thankyou-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section.thankyou-section .padding-x-all {
+  padding: 0 4rem;
+}
+section.thankyou-section .sec-com-padding {
+  padding: 5rem 0;
+}
+.thankyou-section h1 {
+  font-size: 1.9rem;
+  line-height: 2.1rem;
+  font-family: 'halyard-light';
+  margin-bottom: 0.6rem;
+}
+p.thankyou-para {
+  font-family: 'halyard-light';
+  letter-spacing: -0.02rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+section.thankyou-section button.section-main-btn {
+  width: max-content !important;
+  margin: 1rem 0;
+}
+.collection-name-box {
+  margin: 1.3rem 0;
+  border-top: 1px solid;
+  width: 50%;
+  border-bottom: 1px solid;
+  padding: 1.2rem 0;
+}
+.collection-name-box h5 {
+  font-family: 'halyard-light';
+  font-size: 0.85rem;
+}
+.collection-name-box div:first-child {
+  border-right: 1px solid;
+  margin-right: 1.4em;
+  padding-right: 1.4rem;
+}
+.thankyou-section h2 {
+  font-size: 1.1rem;
+  font-family: 'halyard-light';
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+p.problem-text a {
+  color: #000;
+  text-underline-offset: 0.15rem;
+}
+p.problem-text {
+  font-family: 'instrument-regular';
+  font-size: 0.85rem;
+  margin-top: 0.8em;
+}
+ul.prepare-listing h6 {
+  font-family: 'halyard-light';
+  font-size: 0.7rem;
+}
+ul.prepare-listing h6 span {
+  background: #000;
+  color: #fff;
+  padding: 0.3rem 0.55rem;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.9rem;
+  border-radius: 1.1rem;
+  font-size: 0.6rem;
+  margin-right: 0.4rem;
+}
+ul.prepare-listing li {
+  margin: 0.25rem 0;
+}
+
+
+
 
 @media all and (min-width: 1920px) {
   html {
@@ -1610,6 +1691,68 @@ p.smallest-para {
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
+section.thankyou-section .sec-com-padding {
+  padding: 4.5rem 0;
+  padding-bottom: 14rem;
+}
+section.thankyou-section .padding-x-all {
+  padding: 0 1.5rem;
+}
+.thankyou-section h1 {
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+p.thankyou-para {
+  font-size: 0.95rem;
+}
+.collection-name-box{
+  width: 100%;
+  margin: 1.8rem 0;
+}
+.thankyou-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+section.thankyou-section button.section-main-btn{
+  margin: 1.3rem 0;
+}
+ul.prepare-listing h6 {
+  font-size: 1rem;
+}
+ul.prepare-listing h6 span {
+  font-size: 0.9rem;
+  width: 0.8rem;
+  height: 1.4rem;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+}
+ul.prepare-listing li {
+  margin: 0.45rem 0;
+}
+p.problem-text{
+  font-size: 1rem;
+}
+ul.prepare-listing {
+  margin: 1.5rem 0;
+}
+.collection-name-box h5 {
+  font-size: 1.05rem;
+}
+.pincode-form-btn{
+  font-size: 1rem;
+  padding: 0.9rem 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+}
+form.pincode-form input {
+  font-size: 1rem;
+  width: 97%;
+}
+
+
+
 
    }  
 

@@ -56,6 +56,13 @@ const Checkout = () =>{
         setDate(date);
     };
 
+    const navigate = useNavigate();
+
+    const handleApply = () => {
+        navigate('/thankyou');
+    };
+
+
     return (
         <section className='checkout-section item-detail-section items-section same-bg-section relative'>
             <div className="container padding-x-all">
@@ -242,7 +249,7 @@ const Checkout = () =>{
                                     <div className="paypal-detail-box">
 
                                     </div>
-                                    <button className='section-main-btn'   >Pay Now<span><img src={btnArrow} alt="" /></span></button>
+                                    <button className='section-main-btn'  onClick={handleApply} >Pay Now<span><img src={btnArrow} alt="" /></span></button>
                                 </div>
 
                             </form>

@@ -9,6 +9,7 @@ import PerfectFit from './components/PerfectFit';
 import KnowMore from './components/KnowMore';
 import ItemDetail from './components/ItemDetail';
 import Checkout from './components/Checkout';
+import Thankyou from './components/Thankyou';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/know-more" element={<KnowMore/>} />
         <Route path="/item-detail" element={<ItemDetail/>} />
         <Route path="/checkout" element={<Checkout/>} />
+        <Route path="/thankyou" element={<Thankyou/>} />
       </Routes>
     </Router>
   );
