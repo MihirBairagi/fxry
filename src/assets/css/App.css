@@ -1123,6 +1123,10 @@ ul.prepare-listing li {
   margin: 0.25rem 0;
 }
 
+.checkout-left-box .frxy-promise {
+  display: none;
+}
+
 
 
 
@@ -1167,7 +1171,7 @@ ul.prepare-listing li {
       bottom: -21%;
     }
     .show-box {
-      width: 85%;
+      width: calc(100% - 4rem);
       padding: 1.5rem 2rem;
       margin-bottom: 2rem;
   }
@@ -1500,7 +1504,7 @@ h4.show-box-answer {
   height: 2.6rem;
   overflow: hidden;
   padding: 0.6rem 2rem;
-  width: 25rem;
+  width: calc(100% - 4rem);
   margin: auto;
   margin-bottom: 7.5rem;
 }
@@ -1519,9 +1523,12 @@ h4.show-box-answer {
 }
 .show-detail-box {
   width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
 }
 .add-new-item-box{
-  margin-bottom: 7rem;
+  margin-bottom: 1rem;
   padding: 1rem 1.5rem;
 }
 h4.add-new-text{
@@ -1573,14 +1580,14 @@ button.section-main-btn img{
   width: 100%;
 }
 .user-detail-head-box {
-  margin: 1.2rem -1.5rem;
-  position: sticky;
-  top: 0%;
+  margin: 0.5rem 0rem;
+  /* position: sticky; */
+  /* top: 0%; */
   background: #f4f3ee;
-  padding: 1rem;
-  z-index: 10;
-  flex-wrap: nowrap;
-    overflow: scroll;
+  padding: 0rem;
+  /* z-index: 10; */
+  /* flex-wrap: nowrap; */
+    /* overflow: scroll; */
 }
 .user-detail-main-box{
   height: 100%;
@@ -1589,9 +1596,9 @@ button.section-main-btn img{
 .user-detail-head-box div {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-width: 8rem !important;
-  margin-right: 1rem;
+  /* justify-content: space-between; */
+  min-width: 11.8rem !important;
+  margin-bottom: 0.9rem;
 }
 .user-detail-head-box div h6 {
   margin: 0;
@@ -1600,7 +1607,7 @@ button.section-main-btn img{
   padding: 0.4rem 0.5rem;
 }
 .user-detail-head-box div h5 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1rem;
 }
 form.promo-code input {
@@ -1729,7 +1736,7 @@ ul.prepare-listing h6 span {
   text-align: center;
 }
 ul.prepare-listing li {
-  margin: 0.45rem 0;
+  margin: 0.85rem 0;
 }
 p.problem-text{
   font-size: 1rem;
@@ -1751,8 +1758,24 @@ form.pincode-form input {
   width: 97%;
 }
 
-
-
+/* mobile fix   */
+.pincode-box ul.pincode-usp-listing li {
+  margin: 0.2rem 0;
+}
+.sub-total-box ul.fxry-usp-listing li {
+  width: 29%;
+    padding: 0.15rem 0rem;
+    display: block;
+}
+.sub-total-box ul.pincode-usp-listing li img{
+  margin-right: 0;
+  margin-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+ul.pincode-usp-listing p{
+  line-height: 1.3rem;
+  font-size: 1.05rem;
+}
 
    }  
 

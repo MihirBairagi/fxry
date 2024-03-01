@@ -49,7 +49,25 @@ function TypeSelectionScreen() {
       <div className="container padding-x-all">
         <div className="items-box item-pad-box sec-com-padding flex-box justify-between align-center">
     
-          <div className={`show-box ${isOpen ? 'open' : ''}`} onClick={toggleBox}>
+          <div className={`show-box ${isOpen ? 'open mobile-none' : 'mobile-none'}`} onClick={toggleBox}>
+            <div className="show-box-list">
+              <p className='show-box-para' >Your items</p>
+              <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>
+            </div>
+
+            <div className="show-box-list">
+              <p className='show-box-para' >Services</p>
+              <h4 className='show-box-answer'>{selectedPlan ? selectedPlan : '-'}</h4>
+            </div>
+
+            <div className="show-box-last-list">
+              <p className='show-box-para' >Task Detail</p>
+              <h4 className='show-box-answer'>{selectedType ? selectedType : ''} {selectedTask ? selectedTask : '-'}</h4>
+              <p className='show-box-para' >{selectedOption ? selectedOption : '-'}</p>
+            </div>
+          </div>
+
+          <div className={`show-box ${isOpen ? 'desktop-none' : 'open desktop-none'}`} onClick={toggleBox}>
             <div className="show-box-list">
               <p className='show-box-para' >Your items</p>
               <h4 className='show-box-answer'>{selectedType ? selectedType : '-'}</h4>
